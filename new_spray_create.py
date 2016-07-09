@@ -46,7 +46,7 @@ class SVTFCreateOptions(ctypes.Structure):
 
 # funcs
 def pause():
-    input('Press enter to continue...')
+    input('Press anykey to continue...')
 
 def printerror(stuff, ext):
     print('  Error %s %s file:\n\n%s\n' % (stuff, ext, VTFLib.vlGetLastError().decode('utf-8')))
@@ -163,7 +163,7 @@ for file in g_files:
     vmtfile = os.path.abspath(os.path.join('./materials/decals/sprays/', os.path.basename(file)[:-3] + 'vmt'))
     VTFLib.vlMaterialCreate(ctypes.c_char_p(b'LightmappedGeneric'))
     VTFLib.vlMaterialGetFirstNode()
-    VTFLib.vlMaterialAddNodeString(ctypes.c_char_p(b'$basetexture'), ctypes.c_char_p(vmtfile[12:-4].encode('utf-8')))
+    VTFLib.vlMaterialAddNodeString(ctypes.c_char_p(b'$basetexture'), ctypes.c_char_p(('decals/sprays/' + os.path.basename(vtffile)[:-4]).encode('utf-8')))
     VTFLib.vlMaterialAddNodeInteger(b'$translucent', ctypes.c_uint(1))
     VTFLib.vlMaterialAddNodeInteger(b'$decal', ctypes.c_uint(1))
     VTFLib.vlMaterialAddNodeSingle(b'$decalscale', ctypes.c_float(0.5))
