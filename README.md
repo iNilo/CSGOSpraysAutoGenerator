@@ -1,4 +1,4 @@
-# CS-GO-Sprays-Auto-Generator
+# CS:GO Sprays Auto Generator
 Auto generates CS:GO Sprays (compatible with Franug's CS:GO Spray SM Plugin)
 Test image is 滑稽 from http://tieba.baidu.com/
 
