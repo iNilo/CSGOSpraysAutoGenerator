@@ -46,7 +46,7 @@ class SVTFCreateOptions(ctypes.Structure):
 
 # funcs
 def pause():
-    input('Press anykey to continue...')
+    input('Press enter to continue...')
 
 def printerror(stuff, ext):
     print('  Error %s %s file:\n\n%s\n' % (stuff, ext, VTFLib.vlGetLastError().decode('utf-8')))
